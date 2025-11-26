@@ -62,7 +62,7 @@ document.querySelector('form').addEventListener('submit', (e) => {
 
 // Resume preview functionality
 document.getElementById('previewResume').addEventListener('click', () => {
-    window.location.href = 'resume.pdf.docx';
+    window.open('resume.pdf', '_blank');
 });
 
 // Project card click functionality
