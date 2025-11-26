@@ -60,14 +60,9 @@ document.querySelector('form').addEventListener('submit', (e) => {
     alert('Message sent! (This is a demo)');
 });
 
-// Resume download functionality
-document.getElementById('downloadResume').addEventListener('click', () => {
-    const link = document.createElement('a');
-    link.href = 'resume.pdf.docx';
-    link.download = 'Shaik_Shamsheer_Suhail_Resume.docx';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+// Resume preview functionality
+document.getElementById('previewResume').addEventListener('click', () => {
+    window.location.href = 'resume.pdf';
 });
 
 // Project card click functionality
@@ -75,7 +70,7 @@ document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('click', () => {
         const previewUrl = card.getAttribute('data-preview');
         if (previewUrl) {
-            window.open(previewUrl, '_blank');
+            window.location.href = previewUrl;
         }
     });
 });
