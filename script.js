@@ -73,9 +73,9 @@ document.getElementById('downloadResume').addEventListener('click', () => {
 // Project card click functionality
 document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('click', () => {
-        const githubUrl = card.getAttribute('data-github');
-        if (githubUrl) {
-            window.open(githubUrl, '_blank');
+        const previewUrl = card.getAttribute('data-preview');
+        if (previewUrl) {
+            window.open(previewUrl, '_blank');
         }
     });
 });
