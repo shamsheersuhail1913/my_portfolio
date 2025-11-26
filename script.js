@@ -61,7 +61,8 @@ document.querySelector('form').addEventListener('submit', (e) => {
 });
 
 // Resume preview functionality
-document.getElementById('previewResume').addEventListener('click', () => {
+document.getElementById('previewResume').addEventListener('click', (e) => {
+    e.stopPropagation();
     window.open('resume.pdf', '_blank');
 });
 
