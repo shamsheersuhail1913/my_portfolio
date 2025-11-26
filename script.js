@@ -74,8 +74,10 @@ document.getElementById('downloadResume').addEventListener('click', () => {
 document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('click', () => {
         const previewUrl = card.getAttribute('data-preview');
-        if (previewUrl) {
+        if (previewUrl && previewUrl !== 'https://your-foody-live-url.com' && previewUrl !== 'https://your-calculator-live-url.com' && previewUrl !== 'https://your-portfolio-live-url.com') {
             window.open(previewUrl, '_blank');
+        } else {
+            alert('Project preview URL not configured yet. Please update the data-preview attribute.');
         }
     });
 });
