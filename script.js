@@ -55,9 +55,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Form submission
-document.querySelector('form').addEventListener('submit', (e) => {
+document.getElementById('contactForm').addEventListener('submit', (e) => {
     e.preventDefault();
-    alert('Message sent! (This is a demo)');
+    
+    const name = document.getElementById('userName').value.trim();
+    const email = document.getElementById('userEmail').value.trim();
+    const message = document.getElementById('userMessage').value.trim();
+    
+    if (!name || !email || !message) {
+        alert('Please fill in all fields');
+        return;
+    }
+    
+    const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+    
+    const mailtoLink = `mailto:suhailvirat1718@gmail.com?subject=${subject}&body=${body}`;
+    
+    try {
+        window.open(mailtoLink, '_self');
+    } catch (error) {
+        alert('Please make sure you have an email client configured on your system.');
+    }
 });
 
 // Resume preview functionality

@@ -29,16 +29,7 @@
 
     <div class="container">
         <section id="home" class="hero visible">
-            <div class="cube-container">
-                <div class="cube">
-                    <div class="cube-face">S</div>
-                    <div class="cube-face">U</div>
-                    <div class="cube-face">H</div>
-                    <div class="cube-face">A</div>
-                    <div class="cube-face">I</div>
-                    <div class="cube-face">L</div>
-                </div>
-            </div>
+
             <h1>SHAIK SHAMSHEER SUHAIL</h1>
             <p>Computer Science Engineering Student | Full Stack Developer | Software Engineer</p>
             <button class="btn" id="previewResume">👁️ Preview Resume</button>
@@ -57,12 +48,6 @@
                         in emerging technologies. Seeking opportunities to contribute to innovative projects and grow as a 
                         professional software developer.
                     </p>
-                </div>
-                <div class="profile-3d-model">
-                    <div class="hexagon-container">
-                        <div class="hexagon"></div>
-                        <div class="hexagon-inner">👨‍💻</div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -148,15 +133,15 @@
         <section id="contact">
             <div class="contact-form">
                 <h2>Get In Touch</h2>
-                <form>
+                <form id="contactForm">
                     <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
+                        <input type="text" id="userName" name="name" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
+                        <input type="email" id="userEmail" name="email" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
-                        <textarea rows="5" placeholder="Your Message" required></textarea>
+                        <textarea rows="5" id="userMessage" name="message" placeholder="Your Message" required></textarea>
                     </div>
                     <button type="submit" class="btn">Send Message</button>
                 </form>
